@@ -246,28 +246,36 @@ body {
   color: #555;
 }
 
-/* Footer */
 .footer {
-  background-color: #f6f4ee;
+  background-color: #fddae6; /* Màu hồng nhạt */
   padding: 40px 20px;
+  font-family: Arial, sans-serif;
   color: #333;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Chia thành 4 cột */
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
 }
+
+.footer-column {
+  flex: 1 1 22%; /* Mỗi cột chiếm khoảng 1/4 chiều rộng */
+  min-width: 200px;
+}
+
 .footer-column h4 {
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
-  font-size: 16px;
+  color: #fff;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
@@ -275,58 +283,44 @@ body {
 }
 
 .footer-column ul li a {
-  color: #333;
   text-decoration: none;
+  color: #333;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
 }
 
-.footer-column form {
-  display: flex;
-  margin-top: 10px;
-}
-
-.footer-column input[type="email"] {
-  flex: 1;
-  padding: 8px;
+/* Phần form đăng ký */
+.subscribe-box input[type="email"] {
+  width: 100%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 0;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
-.footer-column button {
-  padding: 8px 16px;
-  background-color: #222;
-  color: white;
+.subscribe-box button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.footer-column button:hover {
+.subscribe-box button:hover {
   background-color: #444;
 }
 
+/* Phần theo dõi chúng tôi */
 .social-icons {
+  display: flex;
+  gap: 10px;
   margin-top: 10px;
 }
 
-.social-icons a {
-  font-size: 24px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #333;
+.social-icons img {
+  width: 30px;
+  height: 30px;
 }
-
-.social-icons a:hover {
-  color: #000;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #666;
-}
-  
