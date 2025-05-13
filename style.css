@@ -248,10 +248,87 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #ffe6f0;
-  padding: 15px;
+  background-color: #f6f4ee;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.footer-column input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.footer-column button {
+  padding: 8px 16px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-column button:hover {
+  background-color: #444;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
+.footer-bottom {
   text-align: center;
+  margin-top: 30px;
   font-size: 14px;
-  color: #94445f;
+  color: #666;
 }
   
