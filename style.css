@@ -183,7 +183,7 @@ body {
 }
 .logo-img {
   height: 52px;   /* nhỏ hơn 40px như trước */
-  width: 100px;    /* giữ đúng tỷ lệ ảnh */
+  width: auto;    /* giữ đúng tỷ lệ ảnh */
   margin-right: 16px;
   object-fit: contain;  /* đảm bảo ảnh không bị méo */
   
