@@ -253,36 +253,29 @@ body {
   color: #333;
 }
 
-footer {
-  background-color: #f8f8f8;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.footer-grid {
+.footer-columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .footer-column {
-   flex: 1 1 220px;
+  flex: 1 1 22%; /* Mỗi cột chiếm khoảng 1/4 chiều rộng */
   min-width: 200px;
 }
 
 .footer-column h4 {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #e91e63;
+  color: #fff;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
@@ -290,64 +283,13 @@ footer {
 }
 
 .footer-column ul li a {
-  color: #333;
   text-decoration: none;
+  color: #333;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
 }
-
-.newsletter input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.newsletter button {
-  padding: 8px 16px;
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.newsletter button:hover {
-  background-color: #d81b60;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  margin-right: 10px;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #777;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-grid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
-}
-
 
 /* Phần form đăng ký */
 .subscribe-box input[type="email"] {
