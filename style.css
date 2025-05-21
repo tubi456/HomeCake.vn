@@ -238,6 +238,14 @@ body {
   margin-right: 20px;
   transition: color 0.3s ease;
 }
+.nav-item {
+   text-decoration: none;
+  color: #b03060;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
 
 .nav-links a:hover {
   color: #ff69b4;
