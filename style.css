@@ -30,6 +30,35 @@ body {
   nav a:hover {
     text-decoration: underline;
   }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  color: #e91e63;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fce4ec;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   
   .content {
     padding: 20px;
