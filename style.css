@@ -380,3 +380,51 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+/* form giới thiệu */
+.about-page .content {
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.8; /* Giãn dòng cho dễ đọc */
+  font-size: 16px; /* Kích thước chữ hợp lý hơn */
+  color: #333; /* Màu chữ dễ nhìn */
+}
+
+.about-page .content h1 {
+  text-align: center;
+  margin: 0 auto 24px auto;
+  font-size: 28px;
+  color: #d63384;
+}
+
+.about-page .content h2 {
+  margin-top: 32px;
+  font-size: 22px;
+  color: #986672;
+  border-left: 4px solid #a45f80;
+  padding-left: 12px;
+}
+
+.about-page .content h3 {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #5e3700;
+}
+
+.about-page .content p {
+  text-indent: 2em;
+  margin-bottom: 16px;
+}
+
+.about-page .content ul {
+  padding-left: 2em;
+  margin-bottom: 16px;
+}
+
+.about-page .content ul li {
+  margin-bottom: 8px;
+}
