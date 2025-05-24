@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
     slides[index].classList.add("active");
   }
 
-  setInterval(showNextSlide, 3000); // 3 giây
+  setInterval(showNextSlide, 2000); // 2 giây
 });
