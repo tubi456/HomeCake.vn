@@ -591,6 +591,211 @@ footer {
   font-weight: 500;
   font-size: 16px;
 }
+.news-page-container {
+  max-width: 1200px; /* Chiều rộng tối đa của nội dung */
+  margin: 40px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5em; /* Kích thước chữ lớn */
+  color: #d63385;
+  margin-bottom: 40px;
+  letter-spacing: 2px; /* Khoảng cách giữa các chữ */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #e21c3b; /* Màu đỏ cho đường kẻ dưới tiêu đề */
+  border-radius: 2px;
+}
+
+/* --- Lưới tin tức (News Grid) --- */
+.news-grid {
+  display: grid;
+  /* Chia thành 3 cột, mỗi cột có chiều rộng bằng nhau */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Khoảng cách giữa các card */
+}
+
+.news-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* Đảm bảo hình ảnh tròn góc theo card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ */
+  display: flex;
+  flex-direction: column; /* Xếp ảnh và nội dung theo chiều dọc */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+}
+
+.news-card:hover {
+  transform: translateY(-5px); /* Nhấc nhẹ lên khi hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng đậm hơn khi hover */
+}
+
+.news-image-wrapper {
+  position: relative; /* Quan trọng để định vị date-tag */
+  width: 100%;
+  padding-top: 60%; /* Tỷ lệ khung hình 5:3 (Height / Width * 100) cho hình ảnh */
+  overflow: hidden; /* Đảm bảo hình ảnh không tràn ra ngoài */
+}
+
+.news-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo hình ảnh phủ đầy và không bị méo */
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image-wrapper img {
+  transform: scale(1.05); /* Phóng to nhẹ ảnh khi hover card */
+}
+
+.date-tag {
+  position: absolute;
+  background-color: #e21c3b; /* Màu nền mặc định cho date-tag */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 10; /* Đảm bảo tag nằm trên ảnh */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Định vị date-tag */
+.date-tag.top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.date-tag.bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* Màu sắc cho date-tag (theo hình mẫu) */
+.date-tag.yellow { background-color: #ffc107; } /* Màu vàng */
+.date-tag.green { background-color: #28a745; } /* Màu xanh lá */
+.date-tag.purple { background-color: #6f42c1; } /* Màu tím */
+.date-tag.pink { background-color: #e83e8c; } /* Màu hồng */
+
+
+.news-content {
+  padding: 20px;
+  flex-grow: 1; /* Cho phép phần nội dung giãn nở để chiếm hết không gian còn lại */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Đẩy các phần tử ra xa nhau */
+}
+
+.news-content .category {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.news-content .category .icon {
+  background-color: #e21c3b; /* Màu nền cho icon @ */
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.news-content .sub-category {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-content .news-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  /* Giới hạn số dòng cho tiêu đề nếu cần */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-content .news-excerpt {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 15px;
+  /* Giới hạn số dòng cho đoạn trích */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive design cho màn hình nhỏ hơn */
+@media (max-width: 992px) {
+  .news-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 cột trên tablet */
+      gap: 25px;
+  }
+  .page-title {
+      font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+      grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+      gap: 20px;
+  }
+  .page-title {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+  }
+  .news-card {
+      margin: 0 auto; /* Căn giữa card khi chỉ có 1 cột */
+      max-width: 450px; /* Giới hạn chiều rộng trên mobile để không quá to */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-page-container {
+      padding: 15px;
+      margin: 20px auto;
+  }
+  .news-content {
+      padding: 15px;
+  }
+  .date-tag {
+      padding: 6px 10px;
+      font-size: 0.9em;
+  }
+}
 
 
 
