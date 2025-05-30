@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setInterval(showNextSlide, 2000); // 2 giây
 });
-/Phân trang sản phẩm
+//Phân trang sản phẩm
 document.addEventListener("DOMContentLoaded", function () {
   const soSanPhamMoiTrang = 10; // Số sản phẩm mỗi trang
   const danhSachSanPham = document.querySelectorAll(".product-card"); // Lấy tất cả các thẻ sản phẩm
