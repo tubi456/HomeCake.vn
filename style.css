@@ -457,13 +457,13 @@ footer {
   from { opacity: 0.5; }
   to { opacity: 1; }
 }
-.best-sellers {
+.best-sellers, banhsinhnhatmini {
   padding: 40px 20px;
   text-align: center;
   background-color: #fff7fa;
 }
 
-.best-sellers h2 {
+.best-sellers h2, .banhsinhnhatmini {
   font-size: 28px;
   color:#b03060;
   margin-bottom: 30px;
@@ -539,6 +539,34 @@ footer {
 
 .buy-now:hover {
   background-color: #d81b60;
+}
+/*Phân trang*/
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination button {
+  background-color: #f3f1eb;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #ffca28;
+  color: #000;
+}
+
+.pagination button.active {
+  background-color: #e91e63;
+  color: #fff;
+  font-weight: bold;
 }
 
 .tips-section {
