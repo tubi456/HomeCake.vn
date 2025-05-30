@@ -457,6 +457,7 @@ footer {
   from { opacity: 0.5; }
   to { opacity: 1; }
 }
+/*Phần sản phẩm và phân trang*/
 .best-sellers,.banhsinhnhatmini {
   padding: 40px 20px;
   text-align: center;
