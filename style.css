@@ -457,13 +457,13 @@ footer {
   from { opacity: 0.5; }
   to { opacity: 1; }
 }
-.best-sellers, banhsinhnhatmini {
+.best-sellers,.banhsinhnhatmini {
   padding: 40px 20px;
   text-align: center;
   background-color: #fff7fa;
 }
 
-.best-sellers h2, .banhsinhnhatmini {
+.best-sellers h2,.banhsinhnhatmini h2 {
   font-size: 28px;
   color:#b03060;
   margin-bottom: 30px;
@@ -568,6 +568,7 @@ footer {
   color: #fff;
   font-weight: bold;
 }
+
 
 .tips-section {
   padding: 40px 20px;
