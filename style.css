@@ -458,13 +458,13 @@ footer {
   to { opacity: 1; }
 }
 /*Phần sản phẩm và phân trang*/
-.best-sellers,.banhsinhnhatmini, .banhtiramisu {
+.best-sellers,.banhsinhnhatmini, .banhtiramisu, .banhtrangmieng {
   padding: 40px 20px;
   text-align: center;
   background-color: #fff7fa;
 }
 
-.best-sellers h2,.banhsinhnhatmini h2, .banhtiramisu h2 {
+.best-sellers h2,.banhsinhnhatmini h2, .banhtiramisu h2, .banhtrangmieng h2 {
   font-size: 28px;
   color:#b03060;
   margin-bottom: 30px;
