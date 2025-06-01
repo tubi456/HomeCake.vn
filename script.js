@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tạo vùng chứa nút phân trang
   const khuVucPhanTrang = document.createElement("div");
   khuVucPhanTrang.className = "pagination";
-  document.querySelector(".banhsinhnhatmini, .banhtiramisu, .banhtrangmieng").appendChild(khuVucPhanTrang);
+  document.querySelector(".banhsinhnhatmini, .banhtiramisu, .banhtrangmieng,.banhbonglantrungmuoi").appendChild(khuVucPhanTrang);
 
   // Hàm hiển thị sản phẩm theo trang
   function hienThiTrang(trang) {
