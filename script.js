@@ -61,4 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hienThiTrang(1); // Mặc định hiển thị trang đầu tiên khi tải trang
 });
+/Tăng giảm số lượng
+
+  function increaseQuantity() {
+    var qty = document.getElementById('quantity');
+    qty.value = parseInt(qty.value) + 1;
+  }
+
+  function decreaseQuantity() {
+    var qty = document.getElementById('quantity');
+    if (parseInt(qty.value) > 1) {
+      qty.value = parseInt(qty.value) - 1;
+    }
+  }
 
