@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tạo vùng chứa nút phân trang
   const khuVucPhanTrang = document.createElement("div");
   khuVucPhanTrang.className = "pagination";
-  document.querySelector(".banhsinhnhatmini, .banhtiramisu, .banhtrangmieng, .banhbonglantrungmuoi").appendChild(khuVucPhanTrang);
+  document.querySelector(".banhsinhnhatmini, .banhtiramisu, .banhtrangmieng").appendChild(khuVucPhanTrang);
 
   // Hàm hiển thị sản phẩm theo trang
   function hienThiTrang(trang) {
@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hienThiTrang(1); // Mặc định hiển thị trang đầu tiên khi tải trang
 });
-/Tăng giảm số lượng
+
+//Tăng giảm số lượng
 
   function increaseQuantity() {
     var qty = document.getElementById('quantity');
@@ -74,4 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
       qty.value = parseInt(qty.value) - 1;
     }
   }
+
 
