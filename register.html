@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký - HomeCake</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+  <!-- Thanh trên cùng -->
+  <div class="top-bar">
+    <div>
+      <span>📞 0123456789</span>
+      <span>📧 HomeCake@gmail.com</span>
+    </div>
+    <div>
+      <a href="login.html"><button class="login-button">👤 Đăng nhập</button></a>
+    </div>
+  </div>
+
+  <!-- Thanh điều hướng -->
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="index.html"><img src="images/logo.png" alt="HomeCake Logo" class="logo-img"></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Trang chủ</a>
+      <a href="about.html">Giới thiệu</a>
+      <div class="dropdown">
+        <span class="nav-item">Danh mục sản phẩm ▾</span>
+        <div class="dropdown-content">
+          <a href="minibirthday.html">Bánh sinh nhật mini</a>
+          <a href="tiramisu.html">Bánh Tiramisu</a>
+          <a href="bonglantrungmuoi.html">Bánh bông lan trứng muối</a>
+          <a href="trangmieng.html">Bánh tráng miệng</a>
+        </div>
+      </div>
+      <a href="news.html">Tin tức</a>
+      <a href="contact.html">Liên hệ</a>
+    </div>
+    <div class="nav-right">
+      <div class="cart-button">🛒 Giỏ hàng <span>(0)</span></div>
+    </div>
+  </nav>
+
+  <!-- Nội dung đăng ký -->
+  <main class="register-container">
+    <h2 class="register-title">Tạo tài khoản mới</h2>
+    <form class="register-form" id="registerForm" action="login.html">
+  <div class="form-group">
+    <label for="username">Tên tài khoản <span class="required">*</span></label>
+    <input type="text" id="username" name="username" placeholder="Tên tài khoản" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email <span class="required">*</span></label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Mật khẩu <span class="required">*</span></label>
+    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+  </div>
+
+  <div class="form-group">
+    <label for="confirm-password">Xác nhận mật khẩu <span class="required">*</span></label>
+    <input type="password" id="confirm-password" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
+    <div id="passwordError" class="error-text" style="color:red; font-size: 13px;"></div>
+  </div>
+
+  <div class="form-group">
+    <label><input type="checkbox" id="togglePassword"> Hiện mật khẩu</label>
+  </div>
+
+  <button type="submit" class="btn-submit">Đăng ký</button>
+  <p class="login-link">Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+</form>
+
+
+  </main>
+
+  <!-- Footer lấy từ style.css -->
+  <footer>
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <h4>Về HomeCake</h4>
+        <ul>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo hành</a></li>
+          <li><a href="#">Chính sách đổi - trả - hoàn tiền</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>Đăng ký nhận thông tin</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+
+        <h4>Theo dõi chúng tôi</h4>
+        <div class="social-icons">
+          <a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=61569610366411" target="_blank">
+              <i class="bi bi-facebook fs-4"></i>
+          </a>
+
+          <a href="https://www.instagram.com/home.cake_04/" target="_blank">
+              <i class="bi bi-instagram fs-4"></i>
+           </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">&copy; 2025 HomeCake. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  // Hiện/ẩn mật khẩu
+  document.addEventListener('DOMContentLoaded', () => {
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm-password');
+
+    togglePassword.addEventListener('change', () => {
+      const type = togglePassword.checked ? 'text' : 'password';
+      password.type = type;
+      confirmPassword.type = type;
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
