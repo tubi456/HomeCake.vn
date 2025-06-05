@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanh toán</title>
+  <link rel="stylesheet" href="style.css">
+   <style>
+    body { font-family: Arial; margin: 20px; }
+    .container { display: flex; justify-content: space-between; }
+    .left, .right { width: 48%; }
+    input, textarea { width: 100%; margin: 5px 0; padding: 8px; }
+    .product-summary { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    .total { font-weight: bold; }
+    h2 { 
+         text-align: center;
+         color: #b03060;
+         margin-top: 20px;
+         margin-bottom: 20px;}
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  gap: 10px; /* Khoảng cách nhỏ giữa radio và chữ */
+}
+.radio-option label {
+  margin: 0;
+  white-space: nowrap; /* Không cho label xuống dòng */
+}
+
+.right .summary-line {
+  margin-bottom: 15px;
+}
+
+  </style>
+</head>
+<body>
+<!-- Thanh trên cùng với thông tin -->
+<div class="top-bar">
+  <div>
+    <span>📞 0123456789</span>
+    <span>📧 HomeCake@gmail.com</span>
+  </div>
+  <div>
+    <button>👤 Đăng nhập</button>
+  </div>
+</div>
+<!-- Thanh điều hướng -->
+<!-- Thanh điều hướng -->
+<nav class="main-nav">
+  <!-- Logo bên trái -->
+  <div class="nav-left">
+    <img src="images/logo.png" alt="HomeCake Logo" class="logo-img">
+  </div>
+
+  <!-- Liên kết điều hướng -->
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <div class="dropdown">
+    <span class="nav-item">Danh mục sản phẩm ▾</a>
+    <div class="dropdown-content">
+      <a href="minibirthday.html">Bánh sinh nhật mini</a>
+      <a href="tiramisu.html">Bánh Tiramisu</a>
+      <a href="bonglantrungmuoi.html">Bánh bông lan trứng muối</a>
+      <a href="trangmieng.html">Bánh tráng miệng</a>
+    </div>
+  </div>
+    <a href="news.html">Tin tức</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <!-- Giỏ hàng bên phải -->
+  <div class="nav-right">
+  <button id="cart-icon" onclick="location.href='giohang.html'">
+  🛒 Giỏ hàng <span id="cart-count">(0)</span>
+</button>
+  </div>
+</nav>
+<h2>Thông tin đặt hàng</h2>
+<div class="container">
+  <div class="left">
+    <label>Họ và tên đệm *</label>
+    <input type="text" id="ho">
+    
+    <label>Tên *</label>
+    <input type="text" id="ten">
+    
+    <label>Email</label>
+    <input type="email" id="email">
+    
+    <label>Địa chỉ *</label>
+    <input type="text" id="diachi">
+    
+    <label>Số điện thoại *</label>
+    <input type="tel" id="sdt">
+
+    <label>Ghi chú</label>
+    <textarea id="ghichu"></textarea>
+
+    <h3>Phương thức thanh toán</h3>
+<div class="radio-option">
+  <input type="radio" name="pttt" checked>
+  <label>Chuyển khoản ngân hàng</label>
+</div>
+<div class="radio-option">
+  <input type="radio" name="pttt" style="margin-left: 50px;">
+  <label>Thanh toán khi nhận hàng</label>
+</div>
+  </div>
+
+  <div class="right">
+  <h3 class="summary-line">Tổng giá trị</h3>
+  <div id="product-list" class="summary-line"></div>
+  <div class="total summary-line">Tổng: <span id="total-amount">0</span>đ</div>
+  <button onclick="xacNhan()" class="summary-line">Xác nhận</button>
+</div>
+
+</div>
+
+<script>
+  function loadOrderSummary() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let listDiv = document.getElementById("product-list");
+    let total = 0;
+
+    cart.forEach(item => {
+      let itemTotal = item.price * item.quantity;
+      total += itemTotal;
+
+      let div = document.createElement("div");
+      div.className = "product-summary";
+      div.innerHTML = `
+        <strong>${item.name}</strong><br>
+        Số lượng: ${item.quantity}<br>
+        Giá: ${item.price.toLocaleString()}đ
+      `;
+      listDiv.appendChild(div);
+    });
+
+    const vanChuyen = 35000;
+    total += vanChuyen;
+
+    let vcDiv = document.createElement("div");
+    vcDiv.className = "product-summary";
+    vcDiv.innerHTML = `<strong>Vận chuyển:</strong> 35.000đ`;
+    listDiv.appendChild(vcDiv);
+
+    document.getElementById("total-amount").innerText = total.toLocaleString();
+  }
+
+  function xacNhan() {
+    // Lấy giá trị các ô nhập
+    const ho = document.getElementById("ho").value.trim();
+    const ten = document.getElementById("ten").value.trim();
+    const diachi = document.getElementById("diachi").value.trim();
+    const sdt = document.getElementById("sdt").value.trim();
+
+    // Kiểm tra các trường bắt buộc
+    if (!ho || !ten || !diachi || !sdt) {
+      alert("Vui lòng điền đầy đủ các trường bắt buộc (Họ, Tên, Địa chỉ, Số điện thoại).");
+      return;
+    }
+
+    // Nếu hợp lệ
+    alert("Đơn hàng của bạn đã được xác nhận!");
+    // localStorage.removeItem("cart"); // Nếu muốn xóa giỏ hàng sau khi xác nhận
+  }
+
+  window.onload = loadOrderSummary;
+</script>
+
+
+</body>
+</html>
+
+
+ <script src="script.js"></script>
+ <!--Footer-->
+ <footer>
+  <div class="footer-grid">
+
+      <div class="footer-column">
+        <h4>Về HomeCake</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo hành</a></li>
+          <li><a href="#">Chính sách đổi - trả - hoàn tiền</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>Đăng ký nhận thông tin</h4>
+        <form>
+          <input type="email" placeholder="Email address">
+          <button type="submit">Đăng ký</button>
+        </form>
+        <h4>Theo dõi chúng tôi</h4>
+        <div class="social-icons">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">✖️</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 HomeCake. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>
+
