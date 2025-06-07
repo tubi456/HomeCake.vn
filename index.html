@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HomeCake - Trang chủ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+<!-- Thanh trên cùng với thông tin -->
+<div class="top-bar">
+  <div>
+    <span>📞 0123456789</span>
+    <span>📧 HomeCake@gmail.com</span>
+  </div>
+  <div>
+    <!-- Nút đăng nhập -->
+<div id="login-section">
+  <button onclick="location.href='DangNhap.html'">👤 Đăng nhập</button>
+</div>
+  </div>
+</div>
+<!-- Thanh điều hướng -->
+<!-- Thanh điều hướng -->
+<nav class="main-nav">
+  <!-- Logo bên trái -->
+  <div class="nav-left">
+    <img src="images/logo.png" alt="HomeCake Logo" class="logo-img">
+  </div>
+
+  <!-- Liên kết điều hướng -->
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <div class="dropdown">
+    <span class="nav-item">Danh mục sản phẩm ▾</a>
+    <div class="dropdown-content">
+      <a href="minibirthday.html">Bánh sinh nhật mini</a>
+      <a href="tiramisu.html">Bánh Tiramisu</a>
+      <a href="bonglantrungmuoi.html">Bánh bông lan trứng muối</a>
+      <a href="trangmieng.html">Bánh tráng miệng</a>
+    </div>
+  </div>
+    <a href="news.html">Tin tức</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <!-- Giỏ hàng bên phải -->
+  <div class="nav-right">
+  <button id="cart-icon" onclick="location.href='giohang.html'">
+  🛒 Giỏ hàng <span id="cart-count">(0)</span>
+</button>
+  </div>
+</nav>
+<!-- Slide banner -->
+<div class="banner-slider">
+  <div class="slides">
+    <img src="images/1.png" class="slide active">
+    <img src="images/2.png" class="slide">
+    <img src="images/3.png" class="slide">
+  </div>
+</div>
+<section class="best-sellers">
+  <h2>Sản phẩm bán chạy</h2>
+ <div class="product-grid">
+<!--sp04-->
+    <div class="product-card">
+      <a href="Product_detail/sp04.html" class="product-link">
+      <img src="images/HC_22.jpg" alt="Bánh kem mini socola">
+      <h3>Bánh kem mini socola</h3>
+      <p>110.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+        </a>
+    </div>
+    <!--sp05-->
+    <div class="product-card">
+      <a href="Product_detail/sp05.html" class="product-link">
+      <img src="images/HC_23.jpg" alt="Bánh kem sinh nhật viết chữ">
+      <h3>Bánh kem sinh nhật viết chữ</h3>
+      <p>125.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+        </a>
+    </div>
+    <!--sp02-->
+    <div class="product-card">
+      <a href="Product_detail/sp02.html" class="product-link">
+      <img src="images/HC_20.jpg" alt="Bánh sinh nhật decor xoài tươi">
+      <h3>Bánh sinh nhật decor xoài tươi</h3>
+      <p>120.000đ</p>
+      <div class="product-actions">
+     <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+     </a>
+    </div>
+    <!--sp03-->
+    <div class="product-card">
+      <a href="Product_detail/sp03.html" class="product-link">
+      <img src="images/HC_21.jpg" alt="Bánh kem đơn giản màu xanh ngọc">
+      <h3>Bánh kem đơn giản màu xanh ngọc</h3>
+      <p>105.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+        </a>
+    </div>
+    <!--1-->
+    <div class="product-card">
+      <a href="Product_detail/sp21.html" class="product-link">
+      <img src="images/Banhtiramisuphucaocaodep.jpg" alt="Bánh sinh nhật tiramisu phủ cacao">
+      <h3>Bánh sinh nhật tiramisu phủ cacao</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+     <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+      </a>
+    </div>
+<!--2-->  
+  <div class="product-card">
+      <a href="Product_detail/sp22.html" class="product-link">
+      <img src="images/Banhtiramisutrangtridongian.jpg" alt="Bánh tiramisu trang trí đơn giản">
+      <h3>Bánh tiramisu trang trí đơn giản</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+      </a>
+    </div>
+<!--3--> 
+  <div class="product-card">
+    <a href="Product_detail/sp23.html" class="product-link">
+      <img src="images/Banhtiramisutrangtrioreo.jpg" alt="Bánh tiramisu trang trí oreo">
+      <h3>Bánh tiramisu trang trí oreo</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+      </a>
+    </div>
+<!--4--> 
+  <div class="product-card">
+    <a href="Product_detail/sp24.html" class="product-link">
+      <img src="images/Banhtiramisutrangtribanhkeo.jpg" alt="Bánh tiramisu trang trí bánh kẹo">
+      <h3>Bánh tiramisu trang trí bánh kẹo</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+      </a>
+    </div>
+    <!--3--> 
+  <div class="product-card">
+    <a href="Product_detail/sp43.html" class="product-link">
+      <img src="images/Bl3.jpg" alt="Bánh bông lan trứng muối vuông">
+      <h3>Bánh bông lan trứng muối vuông</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+    <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+        </a>
+    </div>
+<!--4--> 
+  <div class="product-card">
+    <a href="Product_detail/sp44.html" class="product-link">
+      <img src="images/BL4.jpg" alt="Bánh bông lan trứng muối trái tym 1">
+      <h3>Bánh bông lan trứng muối trái tym 1</h3>
+      <p>250.000đ</p>
+      <div class="product-actions">
+     <button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+        </a>
+    </div>
+ </div>
+</section>
+<section class="tips-section">
+  <h2>🎂 HomeCake mách bạn</h2>
+  <div class="tips-grid">
+    <a href="meo-bao-quan-banh.html" class="tip-item">
+      <img src="images/tip1.jpg" alt="Bảo quản bánh">
+      <span>Mẹo bảo quản bánh lâu hơn</span>
+    </a>
+    <a href="chon-banh-sinh-nhat.html" class="tip-item">
+      <img src="images/tip2.jpg" alt="Chọn bánh sinh nhật">
+      <span>Cách chọn bánh sinh nhật phù hợp</span>
+    </a>
+    <a href="an-banh-khong-beo.html" class="tip-item">
+      <img src="images/tip3.jpg" alt="Ăn bánh không béo">
+      <span>Ăn bánh mà không lo béo</span>
+    </a>
+    <a href="banh-cho-tre-nho.html" class="tip-item">
+      <img src="images/tip4.jpg" alt="Bánh cho trẻ nhỏ">
+      <span>Chọn bánh an toàn cho trẻ nhỏ</span>
+    </a>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <h4>Về HomeCake</h4>
+        <ul>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="footer/hethongcuahang.html">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="footer/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
+          <li><a href="footer/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+          <li><a href="footer/chinhsachdoitra.html">Chính sách đổi - trả - hoàn tiền</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="footer/dieukhoan.html">Điều khoản sử dụng</a></li>
+          <li><a href="footer/csbaomattt.html">Chính sách bảo mật thanh toán</a></li>
+          <li><a href="footer/csbaomattcn.html">Chính sách bảo mật thông tin cá nhân</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>Đăng ký nhận thông tin</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+
+        <h4>Theo dõi chúng tôi</h4>
+        <div class="social-icons">
+          <a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=61569610366411" target="_blank">
+              <i class="bi bi-facebook fs-4"></i>
+          </a>
+
+          <a href="https://www.instagram.com/home.cake_04/" target="_blank">
+              <i class="bi bi-instagram fs-4"></i>
+           </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
