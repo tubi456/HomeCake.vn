@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bánh tone hồng</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!-- Thanh trên cùng với thông tin -->
+<div class="top-bar">
+  <div>
+    <span>📞 0123456789</span>
+    <span>📧 HomeCake@gmail.com</span>
+  </div>
+  <!-- Nút đăng nhập -->
+<div id="login-section">
+  <button onclick="location.href='../DangNhap.html'">👤 Đăng nhập</button>
+</div>
+</div>
+<!-- Thanh điều hướng -->
+<!-- Thanh điều hướng -->
+<nav class="main-nav">
+  <!-- Logo bên trái -->
+  <div class="nav-left">
+    <img src="../images/logo.png" alt="HomeCake Logo" class="logo-img">
+  </div>
+
+  <!-- Liên kết điều hướng -->
+  <div class="nav-links">
+    <a href="../index.html">Trang chủ</a>
+    <a href="../about.html">Giới thiệu</a>
+    <div class="dropdown">
+    <span class="nav-item">Danh mục sản phẩm ▾</a>
+    <div class="dropdown-content">
+      <a href="../minibirthday.html">Bánh sinh nhật mini</a>
+      <a href="../tiramisu.html">Bánh Tiramisu</a>
+      <a href="../bonglantrungmuoi.html">Bánh bông lan trứng muối</a>
+      <a href="../trangmieng.html">Bánh tráng miệng</a>
+    </div>
+  </div>
+    <a href="../news.html">Tin tức</a>
+    <a href="../contact.html">Liên hệ</a>
+  </div>
+
+  <!-- Giỏ hàng bên phải -->
+  <div class="nav-right">
+  <button id="cart-icon" onclick="location.href='../giohang.html'">
+  🛒 Giỏ hàng <span id="cart-count">(0)</span>
+</button>
+  </div>
+</nav>
+<!--Chi tiết sản phẩm-->
+<main class="product-detail-section">
+  <div class="product-detail">
+    <div class="left">
+      <img src="../images/Banhsinhnhattonehongxinh.jpg" alt="Bánh tone hồng">
+    </div>
+    <div class="right">
+      <h1>Bánh sinh nhật tone hồng xinh</h1>
+      <p class="price">Giá: <strong>120.000 VNĐ</strong></p>
+      <p class="description">
+      Bánh sinh nhật tone hồng xinh mang vẻ ngọt ngào và nữ tính với sắc hồng chủ đạo, kết hợp trang trí nhẹ nhàng bằng hoa, kem hoặc nơ. <br> 
+      Thiết kế dễ thương, tinh tế, lý tưởng cho các buổi tiệc sinh nhật của bé gái, bạn gái hay những ai yêu thích phong cách dịu dàng. </p>
+      <div class="quantity-selector">
+  <button onclick="decreaseQuantity()">-</button>
+  <input type="text" id="quantity" value="1" readonly>
+  <button onclick="increaseQuantity()">+</button>
+</div>
+<div class="product-actions">
+<button class="add-cart" id="add-to-cart">
+  🛒 Thêm vào giỏ hàng
+</button>
+  </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+
+      <div class="footer-column">
+        <h4>Về HomeCake</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo hành</a></li>
+          <li><a href="#">Chính sách đổi - trả - hoàn tiền</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>Đăng ký nhận thông tin</h4>
+        <form>
+          <input type="email" placeholder="Email address">
+          <button type="submit">Đăng ký</button>
+        </form>
+        <h4>Theo dõi chúng tôi</h4>
+        <div class="social-icons">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">✖️</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 HomeCake. All rights reserved.
+    </div>
+</footer>
+ <script src="../script.js"></script>
+</body>
+</html>
