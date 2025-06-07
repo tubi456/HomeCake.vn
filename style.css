@@ -64,7 +64,9 @@ body {
     padding: 20px;
     text-align: center;
   }
-  
+.dropdown-content.show {
+  display: block;
+}
 
   /* form liên hệ */
   form {
