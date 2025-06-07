@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tin tức</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+<!-- Thanh trên cùng với thông tin -->
+<div class="top-bar">
+  <div>
+    <span>📞 0123456789</span>
+    <span>📧 HomeCake@gmail.com</span>
+  </div>
+  <!-- Nút đăng nhập -->
+<div id="login-section">
+  <button onclick="location.href='DangNhap.html'">👤 Đăng nhập</button>
+</div>
+</div>
+<!-- Thanh điều hướng -->
+<!-- Thanh điều hướng -->
+<nav class="main-nav">
+  <!-- Logo bên trái -->
+  <div class="nav-left">
+    <img src="images/logo.png" alt="HomeCake Logo" class="logo-img">
+  </div>
+
+  <!-- Liên kết điều hướng -->
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <div class="dropdown">
+    <span class="nav-item">Danh mục sản phẩm ▾</a>
+    <div class="dropdown-content">
+      <a href="minibirthday.html">Bánh sinh nhật mini</a>
+      <a href="tiramisu.html">Bánh Tiramisu</a>
+      <a href="bonglantrungmuoi.html">Bánh bông lan trứng muối</a>
+      <a href="trangmieng.html">Bánh tráng miệng</a>
+    </div>
+  </div>
+    <a href="news.html">Tin tức</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+ <!-- Giỏ hàng bên phải -->
+  <div class="nav-right">
+  <button id="cart-icon" onclick="location.href='giohang.html'">
+  🛒 Giỏ hàng <span id="cart-count">(0)</span>
+</button>
+  </div>
+</nav>
+
+ <div class="news-page-container">
+        <h1 class="page-title">Tin tức</h1>
+
+        <div class="news-grid">
+            <a href="summer.html">
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/Givral-Bakery.jpg" alt="HOMECAKE Bakery ưu đãi mùa hè">
+                    <div class="date-tag top-right">
+                        <span>20</span><br><span>05/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">ƯU ĐÃI ĐẶC BIỆT MÙA HÈ!!!</h2>
+                    <p class="news-excerpt">Mùa hè thêm ngọt ngào với chương trình khuyến mãi cực HOT chỉ có tại HOMECAKE: Giảm giá lên tới 20% cho tất cả loại bánh của cửa hàng từ 25/05/2025 tới 25/06/2025</p>
+                  </div>
+            </div>
+                  </a>
+
+            <a href="newsWorkshop.html">     
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/ws.jpg" alt="HOMECAKE Bakery workshop">
+                    <div class="date-tag top-right">
+                        <span>15</span><br><span>05/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">WORKSHOP LÀM BÁNH MIỄN PHÍ</h2>
+                    <p class="news-excerpt">HomeCake Bakery tổ chức sự kiện workshop làm bánh miễn phí dành cho các bé thiếu nhi vào cuối tuần, có sự hướng dẫn của thợ bánh chuyên nghiệp,...</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="newSN.html">
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/sn.jpg" alt="Sinh nhật">
+                    <div class="date-tag top-right yellow">
+                        <span>28</span><br><span>04/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">SINH NHẬT KHÁCH HÀNG</h2>
+                    <p class="news-excerpt">Chương trình diễn ra từ ngày 01/05/2025, HOMECAKE dành tặng cho các khách hàng: 1 bánh cupcake free khi tới cửa hàng và ưu đãi giảm 20% toàn bộ hóa đơn.</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="newsWMD.html">
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/wm.jpg" alt="Sinh nhật">
+                    <div class="date-tag bottom-right green">
+                        <span>08</span><br><span>03/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">HAPPY WOMEN'S DAY</h2>
+                    <p class="news-excerpt">Bánh kem & Bánh ngọt độc đáo, nhân dịp ngày phụ nữ Việt Nam HOMECAKE giảm giá 30% toàn bộ bánh cho khách hàng là nữ. Hãy đến với HOMECAKE ngay thôi!</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="newsVLT.html">
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/vlt.jpg" alt="Valentine's Day">
+                    <div class="date-tag bottom-right pink">
+                        <span>14</span><br><span>02/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">VALENTINE'S DAY...</h2>
+                    <p class="news-excerpt">Mừng Valentine's Day, tiệm bánh HOMECAKE ra mắt nhiều mẫu sản phẩm bánh tình yêu dành cho các couple trao đi bánh ngọt nhận lại ngọt ngào từ người mình yêu</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="newsKT.html">
+            <div class="news-card">
+                <div class="news-image-wrapper">
+                    <img src="images/cuahang.jpg" alt="cuahang">
+                    <div class="date-tag bottom-right purple">
+                        <span>12</span><br><span>02/2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p class="category"><span class="icon">@</span> HOMECAKE BAKERY</p>
+                    <h2 class="news-title">KHAI TRƯƠNG TƯNG BỪNG</h2>
+                    <p class="news-excerpt">HOMECAKE chính thức có mặt tại Hà Nội, hãy đến trải nghiệm không gian ngọt ngào, ấm cúng với những chiếc bánh thơm ngon, tươi mới. Đặc biệt giảm 30% cho 100 khách hàng đầu tiên</p>
+                </div>
+            </div>
+            </a>
+
+        </div>
+    </div>
+
+<!-- Footer -->
+ <footer>
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <h4>Về HomeCake</h4>
+        <ul>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="footer/hethongcuahang.html">Hệ thống cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="footer/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
+          <li><a href="footer/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+          <li><a href="footer/chinhsachdoitra.html">Chính sách đổi - trả - hoàn tiền</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="footer/dieukhoan.html">Điều khoản sử dụng</a></li>
+          <li><a href="footer/csbaomattt.html">Chính sách bảo mật thanh toán</a></li>
+          <li><a href="footer/csbaomattcn.html">Chính sách bảo mật thông tin cá nhân</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>Đăng ký nhận thông tin</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Đăng ký</button>
+        </form>
+
+        <h4>Theo dõi chúng tôi</h4>
+        <div class="social-icons">
+          <a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=61569610366411" target="_blank">
+              <i class="bi bi-facebook fs-4"></i>
+          </a>
+
+          <a href="https://www.instagram.com/home.cake_04/" target="_blank">
+              <i class="bi bi-instagram fs-4"></i>
+           </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
