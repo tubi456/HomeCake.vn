@@ -118,5 +118,22 @@ window.onload = updateCartCount;
   });
 
 
+//click chuột
+document.addEventListener("DOMContentLoaded", function () {
+  const navItem = document.querySelector(".dropdown .nav-item");
+  const dropdownMenu = document.querySelector(".dropdown .dropdown-content");
+
+  navItem.addEventListener("click", function (e) {
+    e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+    dropdownMenu.classList.toggle("show");
+  });
+
+  // Ẩn menu nếu click ra ngoài
+  document.addEventListener("click", function (e) {
+    if (!dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+});
 
 
