@@ -92,13 +92,21 @@ body {
   
   input[type="text"],
   input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  input[type="password"],  /* ✅ THÊM dòng này vào */
+    textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+   .register-title {
+  text-align: center;
+  color: #b03060;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
   
   button {
     background-color: #d94f70;
